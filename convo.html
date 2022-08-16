@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chat App Sample</title>
+
+    <style>
+        #messagesContainer div {
+            padding: 0.3em;
+            border: solid 1px black;
+            width: 55%;
+            border-radius: 1em 1em 1em 0px;
+            margin: 1em;
+            clear: both;
+        }
+        #messagesContainer div.from {
+            float: right;
+            border-radius: 1em 1em 0px 1em;
+        }
+        section {
+            clear:both;
+        }
+        textarea {
+            width: 80%;
+            height: 3em;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1>Chat App Sample</h1>
+        <p>You must design this page and its controls following your interface design.</p>
+    </header>
+
+    <script src="js/get_alias.js"></script>
+    <h2>Conversation with <span id="user_partner_span"></span></h2>
+    <script>get_alias(window.localStorage.getItem("user_partner"),"user_partner_span");</script>
+
+    <section id="messagesContainer"></section>
+    <script src="js/select_messages.js"></script>
+
+
+    <section id="newMessage">
+        <form id="messageForm" action="" method="post">
+            <textarea name="content"></textarea>
+            <input type="submit" value=">">
+        </form>
+        <script src="js/insert_message.js"></script>
+    </section>
+
+
+</div><!--wrapper-->
+</body>
+</html>
